@@ -94,6 +94,7 @@ app.put("/movies/:movieId/", async (request, response) => {
   await db.run(updateMovieQuery);
   response.send("Movie Details Updated");
 });
+//DELETE MOVIE
 app.delete("/movies/:movieId/", async (request, response) => {
   const { movieId } = request.params;
   const deleteQuery = `
