@@ -76,6 +76,7 @@ app.get("/movies/:movieId/", async (request, response) => {
   const movie = await db.get(getMovieQuery);
   response.send(convertMovieTableDBObjectToResponseObject(movie));
 });
+//UPDATE MOVIE API
 app.put("/movies/:movieId/", async (request, response) => {
   const { movieId } = request.params;
   const movieDetails = request.body;
